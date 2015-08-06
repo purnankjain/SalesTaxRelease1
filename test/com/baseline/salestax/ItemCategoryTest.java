@@ -29,4 +29,11 @@ public class ItemCategoryTest {
 
         assertEquals(10, itemCategory.calculateTax(price), errorMargin);
     }
+
+    @Test
+    public void shouldTellWhenAnItemIsPresent() {
+        String item = "Chocolate";
+
+        assertEquals(true, itemCategory.hasItem(item));
+    }
 }
