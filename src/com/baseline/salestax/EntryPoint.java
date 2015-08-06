@@ -10,7 +10,8 @@ public class EntryPoint {
         items.add("Chocolate");
         ItemCategory itemCategory = new ItemCategory(items, 10);
         InputView inputView = new InputView(new BufferedReader(new InputStreamReader(System.in)));
-        SalesTaxApplication salesTaxApplication = new SalesTaxApplication(itemCategory, inputView);
+        Lexer lexer = new Lexer(" ");
+        SalesTaxApplication salesTaxApplication = new SalesTaxApplication(itemCategory, inputView, lexer);
         salesTaxApplication.start();
     }
 }

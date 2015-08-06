@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ItemCategory {
     protected ArrayList<String> items;
     protected double salesTaxRate;
+    private int categoryPreference;
 
     public ItemCategory(ArrayList<String> items, double salesTaxRate) {
         this.items = items;
