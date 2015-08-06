@@ -3,7 +3,9 @@ package com.baseline.salestax;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertArrayEquals;
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class LexerTest {
 
@@ -17,8 +19,11 @@ public class LexerTest {
     @Test
     public void shouldLexInput() {
         String input = "Hello World How";
-        String[] tokens = {"Hello", "World", "How"};
+        ArrayList<String> tokens = new ArrayList<String>();
+        tokens.add("Hello");
+        tokens.add("World");
+        tokens.add("How");
 
-        assertArrayEquals(tokens, lexer.lex(input));
+        assertEquals(tokens.toString(), lexer.lex(input).toString());
     }
 }

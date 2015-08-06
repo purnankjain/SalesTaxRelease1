@@ -18,7 +18,6 @@ public class SalesTaxApplication {
         String[] tokens;
         while(count > 0) {
             input = inputView.readline();
-            tokens = lexer.lex(input);
             count--;
         }
     }

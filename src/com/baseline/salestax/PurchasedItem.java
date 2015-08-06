@@ -1,12 +1,14 @@
 package com.baseline.salestax;
 
+import java.util.ArrayList;
+
 public class PurchasedItem {
    private int count;
-   private String[] details;
+   private ArrayList<String> details;
    private double price;
    private double taxAmountPerItem;
 
-   public PurchasedItem(int count, String[] details, double price, double taxAmountPerItem) {
+   public PurchasedItem(int count, ArrayList<String> details, double price, double taxAmountPerItem) {
       this.count = count;
       this.details = details;
       this.price = price;

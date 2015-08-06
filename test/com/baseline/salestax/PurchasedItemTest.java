@@ -22,7 +22,7 @@ public class PurchasedItemTest {
         price = 10;
         errorMargin = 0.0;
         taxAmountPerItem = 10.0;
-        purchasedItem = new PurchasedItem(count, details, price, taxAmountPerItem);
+        purchasedItem = new PurchasedItem(count, null, price, taxAmountPerItem);
     }
 
     @Test

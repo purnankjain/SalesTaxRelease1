@@ -9,13 +9,13 @@ public class TaxCalculator {
         this.itemCategories = itemCategories;
     }
 
-    public double calculateTaxForItem(String[] itemTokens, double price) {
+    public double calculateTaxForItem(ArrayList<String> itemTokens, double price) {
         ItemCategory itemCategory = findItemCategory(itemTokens);
         return itemCategory.calculateTax(price);
     }
 
-    private ItemCategory findItemCategory(String[] itemTokens) {
-        if(itemTokens[0].equals("imported")) {
+    private ItemCategory findItemCategory(ArrayList<String> itemTokens) {
+        if(itemTokens.get(0).equals("imported")) {
             return itemCategories.get(0);
         }
         else

@@ -14,14 +14,14 @@ public class TaxCalculatorTest {
     TaxCalculator taxCalculator;
     ArrayList<ItemCategory> itemCategories;
     ItemCategory itemCategory;
-    String[] itemTokens;
+    ArrayList<String> itemTokens;
     double price;
 
     @Before
     public void initialise() {
         itemCategories = new ArrayList<ItemCategory>();
-        itemTokens = new String[1];
-        itemTokens[0] = "Book";
+        itemTokens = new ArrayList<String>();
+        itemTokens.add("Book");
         price = 10;
         itemCategory = mock(ItemCategory.class);
         itemCategories.add(itemCategory);
@@ -30,7 +30,7 @@ public class TaxCalculatorTest {
 
     @Test
     public void shouldCalculateTestAccordingToItem() {
-        when(itemCategory.hasItem(itemTokens[0])).thenReturn(true);
+        when(itemCategory.hasItem(itemTokens.get(0))).thenReturn(true);
         when(itemCategory.calculateTax(price)).thenReturn(1.2);
 
         assertEquals(1.2, taxCalculator.calculateTaxForItem(itemTokens, price), 0.0);
